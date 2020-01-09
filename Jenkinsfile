@@ -59,7 +59,6 @@ pipeline {
       agent any
       steps {
         echo 'test2'
-        waitForQualityGate(credentialsId: 'sonarwebhook', abortPipeline: true)
       }
     }
 
