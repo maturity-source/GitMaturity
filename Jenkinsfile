@@ -38,9 +38,20 @@ pipeline {
     }
 
     stage('Frontend') {
-      agent any
-      steps {
-        echo 'test'
+      parallel {
+        stage('Frontend') {
+          agent any
+          steps {
+            echo 'test'
+          }
+        }
+
+        stage('PrepaSonar') {
+          steps {
+            withSonarQubeEnv(installationName: 'PrepaSonar', credentialsId: 'Sonarqube')
+          }
+        }
+
       }
     }
 
@@ -48,6 +59,7 @@ pipeline {
       agent any
       steps {
         echo 'test2'
+        waitForQualityGate(credentialsId: 'sonarwebhook', abortPipeline: true)
       }
     }
 
