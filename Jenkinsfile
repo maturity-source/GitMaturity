@@ -48,7 +48,7 @@ pipeline {
 
         stage('git') {
           steps {
-            git(url: 'https://gitea.sprint-pay.com/yannick.mengue/providers.git', branch: 'master', credentialsId: 'yolande.kamga', poll: true)
+            git(url: 'https://gitea.sprint-pay.com/yannick.mengue/providers.git', branch: 'master', credentialsId: 'yolande.kamga SprintYolande')
           }
         }
 
