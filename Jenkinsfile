@@ -20,9 +20,20 @@ pipeline {
     }
 
     stage('Backend') {
-      agent any
-      steps {
-        echo 'salut'
+      parallel {
+        stage('Backend') {
+          agent any
+          steps {
+            echo 'salut'
+          }
+        }
+
+        stage('qualité') {
+          steps {
+            mail(subject: 'essai', body: 'test', to: 'yolande.kamga@sprint-pay.comyolande.kamga@sprint-pay.com', from: 'happymaturity@gmail.com')
+          }
+        }
+
       }
     }
 
