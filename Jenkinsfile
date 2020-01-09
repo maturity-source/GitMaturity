@@ -12,6 +12,7 @@ pipeline {
         stage('Essai') {
           steps {
             fileExists 'pom.xml'
+            build(job: 'sonartest', quietPeriod: 1)
           }
         }
 
