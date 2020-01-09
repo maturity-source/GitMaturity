@@ -15,7 +15,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Passer') {
           steps {
             sh 'on teste le back'
           }
@@ -30,9 +30,9 @@ pipeline {
       }
     }
 
-    stage('Activité Stactic') {
+    stage('ActivitÃ© Stactic') {
       steps {
-        sh 'echo qualité du code'
+        sh 'echo qualitÃ© du code'
       }
     }
 
