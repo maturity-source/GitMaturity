@@ -28,7 +28,7 @@ pipeline {
           }
         }
 
-        stage('qualit�') {
+        stage('qualité') {
           steps {
             mail(subject: 'essai', body: 'test', to: 'yolande.kamga@sprint-pay.comyolande.kamga@sprint-pay.com', from: 'happymaturity@gmail.com')
           }
@@ -44,7 +44,7 @@ pipeline {
       }
     }
 
-    stage('ActivitÃ© Stactic') {
+    stage('ActivitÃƒÂ© Stactic') {
       agent any
       steps {
         echo 'test2'
