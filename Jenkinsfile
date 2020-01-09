@@ -30,7 +30,7 @@ pipeline {
 
         stage('qualité') {
           steps {
-            mail(subject: 'Pipeline', body: 'Build OK', from: 'yolande.kamga@sprint-spay.com', cc: 'yolande.kamga@sprint-spay.com', replyTo: 'yolande.kamga@sprint-spay.com')
+            mail(subject: 'Pipeline', body: 'Build OK', from: 'yolande.kamga@sprint-pay.com  ', cc: ' yolande.kamga@sprint-pay.com  ', replyTo: 'yolande.kamga@sprint-pay.com  ')
           }
         }
 
