@@ -8,19 +8,8 @@ pipeline {
     }
 
     stage('Backend') {
-      parallel {
-        stage('Backend') {
-          steps {
-            sh 'echo pour le back'
-          }
-        }
-
-        stage('Passer') {
-          steps {
-            sh 'on teste le back'
-          }
-        }
-
+      steps {
+        sh 'echo pour le back'
       }
     }
 
