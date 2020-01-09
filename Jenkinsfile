@@ -2,8 +2,19 @@ pipeline {
   agent any
   stages {
     stage('Buid') {
-      steps {
-        echo 'soimple'
+      parallel {
+        stage('Buid') {
+          steps {
+            echo 'soimple'
+          }
+        }
+
+        stage('Essai') {
+          steps {
+            fileExists 'pom.xml'
+          }
+        }
+
       }
     }
 
