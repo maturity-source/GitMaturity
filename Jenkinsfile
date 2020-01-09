@@ -10,21 +10,21 @@ pipeline {
     stage('Backend') {
       agent any
       steps {
-        sh ' pour le back'
+        echo 'salut'
       }
     }
 
     stage('Frontend') {
       agent any
       steps {
-        sh 'C\'est pour le Front'
+        echo 'test'
       }
     }
 
     stage('ActivitÃ© Stactic') {
       agent any
       steps {
-        sh 'Qualité du code'
+        echo 'test2'
       }
     }
 
