@@ -8,20 +8,23 @@ pipeline {
     }
 
     stage('Backend') {
+      agent any
       steps {
         sh ' pour le back'
       }
     }
 
     stage('Frontend') {
+      agent any
       steps {
         sh 'C\'est pour le Front'
       }
     }
 
-    stage('Activité Stactic') {
+    stage('ActivitÃ© Stactic') {
+      agent any
       steps {
-        sh 'Qualit� du code'
+        sh 'Qualité du code'
       }
     }
 
