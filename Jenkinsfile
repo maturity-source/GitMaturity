@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Buid') {
       steps {
-        sh 'echo pour passer un build'
+        echo 'soimple'
       }
     }
 
