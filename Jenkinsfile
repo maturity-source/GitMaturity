@@ -46,9 +46,9 @@ pipeline {
           }
         }
 
-        stage('PrepaSonar') {
+        stage('git') {
           steps {
-            withSonarQubeEnv(installationName: 'PrepaSonar', credentialsId: 'Sonarqube')
+            git(url: 'https://gitea.sprint-pay.com/yannick.mengue/providers.git', branch: 'master', credentialsId: 'yolande.kamga', poll: true)
           }
         }
 
