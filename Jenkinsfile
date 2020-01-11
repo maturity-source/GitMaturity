@@ -48,7 +48,7 @@ pipeline {
 
         stage('git') {
           steps {
-            findBuildScans()
+            error 'il ya une erreur ors du build'
           }
         }
 
