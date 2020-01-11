@@ -48,7 +48,7 @@ pipeline {
 
         stage('git') {
           steps {
-            git(url: 'https://gitea.sprint-pay.com/yannick.mengue/providers.git', branch: 'master', credentialsId: 'yolande.kamga/SprintYolandeGit', changelog: true, poll: true)
+            jacoco(buildOverBuild: true, changeBuildStatus: true, maximumMethodCoverage: '100', minimumBranchCoverage: '80', minimumClassCoverage: '80', minimumComplexityCoverage: '80', minimumInstructionCoverage: '80', minimumLineCoverage: '80', minimumMethodCoverage: '80', deltaBranchCoverage: 'master', deltaClassCoverage: 'all', maximumLineCoverage: '80', maximumInstructionCoverage: '80', maximumComplexityCoverage: '100', maximumClassCoverage: '100', maximumBranchCoverage: '80', classPattern: '\'target/classes\'', execPattern: '\'target/classes\'', sourceExclusionPattern: '\'src/test*\'')
           }
         }
 
