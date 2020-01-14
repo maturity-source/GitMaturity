@@ -56,9 +56,20 @@ pipeline {
     }
 
     stage('ActivitÃƒÂ© Stactic') {
-      agent any
-      steps {
-        echo 'test2'
+      parallel {
+        stage('ActivitÃƒÂ© Stactic') {
+          agent any
+          steps {
+            echo 'test2'
+          }
+        }
+
+        stage('qqs') {
+          steps {
+            sh 'echo bonjour'
+          }
+        }
+
       }
     }
 
